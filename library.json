@@ -1,0 +1,62 @@
+{
+  "name": "AL_sensors",
+  "version": "0.0.1",
+  "license": "MIT",
+  "description": "Sensor librarie tools.",
+  "keywords": "Sensors",
+  "repository":
+  {
+    "type": "git",
+    "url": "https://github.com/AdriLighting/AL_sensors.git"
+  },
+  "authors":
+  [
+    {
+      "name": "Grellard Adrien",
+      "email": "grellard.adrien@gmail.com",
+      "maintainer": true
+    }
+  ],
+  "dependencies": [
+    {
+        "owner": "Benoit Blanchon",
+        "name": "ArduinoJson",
+        "version": "https://github.com/bblanchon/ArduinoJson.git"
+    },
+    {
+        "owner": "Adafruit Unified Sensor",
+        "name": "Adafruit",
+        "version": "https://github.com/adafruit/Adafruit_Sensor.git"
+    },
+    {
+        "owner": "Paul Stoffregen",
+        "name": "OneWire",
+        "version": "https://github.com/PaulStoffregen/OneWire.git"
+    },    
+    {
+        "owner": "Miles Burton",
+        "name": "DallasTemperature",
+        "version": "https://github.com/milesburton/Arduino-Temperature-Control-Library.git"
+    },
+    {
+        "owner": "DHT sensor library",
+        "name": "Adafruit",
+        "version": "https://github.com/adafruit/DHT-sensor-library.git"
+    },    
+    {
+        "owner": "Ivan Seidel",
+        "name": "LinkedList",
+        "version": "https://github.com/AdriLighting/LinkedList.git"
+    },
+    {
+        "owner": "Grellard Adrien",
+        "name": "esp_al_tools",
+        "version": "https://github.com/AdriLighting/esp_al_tools.git"
+    }
+
+  ],
+  
+  "frameworks": "arduino",
+  "platforms": "esp8266",
+  "headers": "AL_sensors.h"
+}
