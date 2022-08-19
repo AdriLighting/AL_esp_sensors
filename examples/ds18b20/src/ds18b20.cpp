@@ -13,7 +13,7 @@ void setup()
   Serial.println();
   Serial.println("STARTUP");
 
-  _ds18b20.create(D7);
+  _ds18b20.create(D1);
 
 }
 

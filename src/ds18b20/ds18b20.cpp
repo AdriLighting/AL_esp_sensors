@@ -13,11 +13,26 @@ void DS18B20Class::begin(){
 }
 uint8_t DS18B20Class::get_pin() {return _pin;}
 void DS18B20Class::read_temperature(float & result, boolean & isNan){
-  _module->requestTemperatures(); 
-  float temp = _module->getTempCByIndex(0);
+
+  float temp = DEVICE_DISCONNECTED_C;
+
+  while(1) {
+    _module->requestTemperatures(); 
+    temp = _module->getTempCByIndex(0);   
+    if (temp != DEVICE_DISCONNECTED_C) {
+      break;
+    } 
+    delay(0);
+   } 
+
   if(temp != DEVICE_DISCONNECTED_C)   isNan = true;
-  else                isNan = false;
-  if (!isNan) {result = _last_t; return;}
+  else                                isNan = false;
+
+  if (!isNan) {
+    result = _last_t; 
+    return;
+  }
+
   _last_t = temp;
   result = temp;
 }
